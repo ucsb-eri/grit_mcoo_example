@@ -1,0 +1,12 @@
+services:
+  api:
+    image: ghcr.io/ucsb-eri/grit_mcoo_example:latest
+    environment:
+      PORT: 8080
+    ports:
+      - '8080:8080'
+    restart: "unless-stopped"
+    volumes:
+      - test_volume:/data/templates
+volumes:
+  test_volume:
